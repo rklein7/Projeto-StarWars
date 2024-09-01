@@ -1,7 +1,11 @@
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import { useState, useEffect } from 'react'; // Import useState and useEffect
+import { useState } from 'react'; 
+import { ImageBackground } from 'react-native';
+import backgroundImage from "../images/backgroundImage.jpeg"
 
-export default function LightSide() {
+
+export default function DarkSide({navigation}) {
+
   const characters = [
     { name: 'Darth Vader', url: 'https://swapi.dev/api/people/4/' },
     { name: 'Darth Maul', url: 'https://swapi.dev/api/people/44/' },
@@ -12,14 +16,15 @@ export default function LightSide() {
   const [loading, setLoading] = useState(false);
 
   const handleCharacterPress = async (character) => {
-    console.log(`Personagem selecionado: ${character.name}`);
-    console.log(`URL da API: ${character.url}`);
+     console.log(`Personagem selecionado: ${character.name}`);
+     console.log(`URL da API: ${character.url}`);
 
     try {
       setLoading(true);
       const response = await fetch(character.url);
       const data = await response.json();
       console.log('Detalhes do personagem:', data);
+      navigation.navigate('CharacterDetails', { character: data });
     } catch (error) {
       console.error('Erro ao buscar detalhes:', error);
     } finally {
@@ -28,6 +33,7 @@ export default function LightSide() {
   };
 
   return (
+    <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
     <View style={styles.container}>
       {loading ? (
         <Text>Loading...</Text>
@@ -45,13 +51,13 @@ export default function LightSide() {
         ))
       )}
     </View>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -67,11 +73,15 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderRadius: 8,
     backgroundColor: "red",
-    marginBottom: 10,
+    marginBottom: 30,
   },
   buttonText: {
     color: "white",
     fontSize: 22,
     fontWeight: "600",
+  },
+  backgroundImage: {
+    flex: 1,
+    resizeMode: 'cover',
   },
 });

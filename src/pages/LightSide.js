@@ -1,5 +1,7 @@
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
-import { useState, useEffect } from 'react'; // Import useState and useEffect
+import { useState, useEffect } from 'react'; 
+import { ImageBackground } from 'react-native';
+import backgroundImage from "../images/backgroundImage.jpeg"
 
 export default function LightSide() {
   const characters = [
@@ -29,6 +31,7 @@ export default function LightSide() {
   };
 
   return (
+    <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
     <View style={styles.container}>
       {loading ? (
         <Text>Loading...</Text>
@@ -46,13 +49,13 @@ export default function LightSide() {
         ))
       )}
     </View>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#000',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -67,12 +70,16 @@ const styles = StyleSheet.create({
     height: 60,
     borderWidth: 1,
     borderRadius: 8,
-    backgroundColor: "#0000CD",
-    marginBottom: 10,
+    backgroundColor: "blue",
+    marginBottom: 30,
   },
   buttonText: {
     color: "white",
     fontSize: 22,
     fontWeight: "600",
+  },
+  backgroundImage: {
+    flex: 1,
+    resizeMode: 'cover', 
   },
 });
