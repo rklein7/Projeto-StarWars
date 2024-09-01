@@ -1,6 +1,6 @@
 import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 import React from "react";
-// import starwarsLogo from "./assets/starwarsLogo.png";
+import starwarsLogo from "../images/starwarsLogo.png";
 
 export default function Home({ navigation }) {
   const goToLightSide = () => navigation.navigate("LightSide");
@@ -8,7 +8,7 @@ export default function Home({ navigation }) {
 
   return (
     <View style={[styles.container]}>
-      {/* <Image source={starwarsLogo} style={styles.logo} /> */}
+      <Image source={starwarsLogo} style={styles.logo} />
       <Text style={styles.title}>Hello There!</Text>
       <Text style={styles.text}>Para começarmos, selecione o lado que deseja seguir</Text>
       <TouchableOpacity style={styles.buttonLightSide} onPress={goToLightSide}>
@@ -24,11 +24,12 @@ export default function Home({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'space-between', // Centraliza verticalmente
-    alignItems: 'center', // Centraliza horizontalmente
+    justifyContent: 'space-between', 
+    alignItems: 'center', 
     paddingHorizontal: 30,
-    paddingVertical: 100, // Adiciona padding para espaço entre o topo e os botões
+    paddingVertical: 100, 
     backgroundColor: "#000",
+    fontFamily: "ITC SerifGothic"
   },
   title: {
     paddingTop : 120,
@@ -65,8 +66,9 @@ const styles = StyleSheet.create({
     fontWeight: "600",
   },
   logo: {
-    width: 300,
-    height: 200,
+    width: 200,
+    height: 100,
     marginBottom: 20,
   },
+
 });
