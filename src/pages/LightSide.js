@@ -1,23 +1,50 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { useState, useEffect } from 'react'; // Import useState and useEffect
 
 export default function LightSide() {
+  const characters = [
+    { name: 'Luke Skywalker', url: 'https://swapi.dev/api/people/1/' },
+    { name: 'Leia Organa', url: 'https://swapi.dev/api/people/5/' },
+    { name: 'Yoda', url: 'https://swapi.dev/api/people/20/' },
+    { name: 'Obi-wan Kenobi', url: 'https://swapi.dev/api/people/10/' },
+    { name: 'Mace Windu', url: 'https://swapi.dev/api/people/51/' },
+  ];
+
+  const [loading, setLoading] = useState(false);
+
+  const handleCharacterPress = async (character) => {
+    console.log(`Personagem selecionado: ${character.name}`);
+    console.log(`URL da API: ${character.url}`);
+
+    try {
+      setLoading(true);
+      const response = await fetch(character.url);
+      const data = await response.json();
+      console.log('Detalhes do personagem:', data);
+    } catch (error) {
+      console.error('Erro ao buscar detalhes:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>LightSide</Text>
-      <TouchableOpacity style={[styles.buttonLight, { backgroundColor: '#00FF00' }]}>
-        <Text style={[styles.buttonText, { color: '#000000' }]}>Luke Skywalker</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={[styles.buttonLight, { backgroundColor: '#00FF00' }]}>
-        <Text style={[styles.buttonText, { color: '#000000' }]}>Leia Organa</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={[styles.buttonLight, { backgroundColor: '#00FF00' }]}>
-        <Text style={[styles.buttonText, { color: '#000000' }]}>Obi-Wan Kenobi</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={[styles.buttonLight, { backgroundColor: '#00FF00' }]}>
-        <Text style={[styles.buttonText, { color: '#000000' }]}>Yoda</Text>
-      </TouchableOpacity>
-      <StatusBar style="auto" />
+      {loading ? (
+        <Text>Loading...</Text>
+      ) : (
+        characters.map((character) => (
+          <TouchableOpacity
+            key={character.name}
+            style={[styles.buttonLight]}
+            onPress={() => handleCharacterPress(character)}
+          >
+            <Text style={[styles.buttonText]}>
+              {character.name}
+            </Text>
+          </TouchableOpacity>
+        ))
+      )}
     </View>
   );
 }
@@ -30,7 +57,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    color: "white"
+    color: "white",
+    marginBottom: 20,
   },
   buttonLight: {
     justifyContent: "center",
@@ -43,6 +71,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   buttonText: {
+    color: "white",
     fontSize: 22,
     fontWeight: "600",
   },

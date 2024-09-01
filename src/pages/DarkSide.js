@@ -1,23 +1,49 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { useState, useEffect } from 'react'; // Import useState and useEffect
 
 export default function LightSide() {
+  const characters = [
+    { name: 'Darth Vader', url: 'https://swapi.dev/api/people/4/' },
+    { name: 'Darth Maul', url: 'https://swapi.dev/api/people/44/' },
+    { name: 'Palpatine', url: 'https://swapi.dev/api/people/?search=palpatine' },
+    { name: 'Counde Dooku', url: 'https://swapi.dev/api/people/?search=dooku' },
+  ];
+
+  const [loading, setLoading] = useState(false);
+
+  const handleCharacterPress = async (character) => {
+    console.log(`Personagem selecionado: ${character.name}`);
+    console.log(`URL da API: ${character.url}`);
+
+    try {
+      setLoading(true);
+      const response = await fetch(character.url);
+      const data = await response.json();
+      console.log('Detalhes do personagem:', data);
+    } catch (error) {
+      console.error('Erro ao buscar detalhes:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>DarkSide</Text>
-      <TouchableOpacity style={[styles.buttonDark]}>
-        <Text style={[styles.buttonText, { color: '#000000' }]}>Darth Vader</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={[styles.buttonDark]}>
-        <Text style={[styles.buttonText, { color: '#000000' }]}>Darth Maul</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={[styles.buttonDark]}>
-        <Text style={[styles.buttonText, { color: '#000000' }]}>Counde Dooku</Text>
-      </TouchableOpacity>
-      <TouchableOpacity style={[styles.buttonDark]}>
-        <Text style={[styles.buttonText, { color: '#000000' }]}>Palpatine</Text>
-      </TouchableOpacity>
-      <StatusBar style="auto" />
+      {loading ? (
+        <Text>Loading...</Text>
+      ) : (
+        characters.map((character) => (
+          <TouchableOpacity
+            key={character.name}
+            style={[styles.buttonDark]}
+            onPress={() => handleCharacterPress(character)}
+          >
+            <Text style={[styles.buttonText]}>
+              {character.name}
+            </Text>
+          </TouchableOpacity>
+        ))
+      )}
     </View>
   );
 }
@@ -30,7 +56,8 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    color: "white"
+    color: "white",
+    marginBottom: 20,
   },
   buttonDark: {
     justifyContent: "center",
@@ -43,6 +70,7 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   buttonText: {
+    color: "white",
     fontSize: 22,
     fontWeight: "600",
   },
