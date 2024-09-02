@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { ImageBackground } from 'react-native';
 import backgroundImage from "../images/backgroundImage.jpeg"
 
-export default function LightSide() {
+export default function LightSide({ navigation }) {
   const characters = [
     { name: 'Luke Skywalker', url: 'https://swapi.dev/api/people/1/' },
     { name: 'Leia Organa', url: 'https://swapi.dev/api/people/5/' },
@@ -15,14 +15,15 @@ export default function LightSide() {
   const [loading, setLoading] = useState(false);
 
   const handleCharacterPress = async (character) => {
-    console.log(`Personagem selecionado: ${character.name}`);
-    console.log(`URL da API: ${character.url}`);
+     console.log(`Personagem selecionado: ${character.name}`);
+     console.log(`URL da API: ${character.url}`);
 
     try {
       setLoading(true);
       const response = await fetch(character.url);
       const data = await response.json();
       console.log('Detalhes do personagem:', data);
+      navigation.navigate('CharacterDetails', { character: data });
     } catch (error) {
       console.error('Erro ao buscar detalhes:', error);
     } finally {

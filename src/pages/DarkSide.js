@@ -9,8 +9,8 @@ export default function DarkSide({navigation}) {
   const characters = [
     { name: 'Darth Vader', url: 'https://swapi.dev/api/people/4/' },
     { name: 'Darth Maul', url: 'https://swapi.dev/api/people/44/' },
-    { name: 'Palpatine', url: 'https://swapi.dev/api/people/?search=palpatine' },
-    { name: 'Counde Dooku', url: 'https://swapi.dev/api/people/?search=dooku' },
+    { name: 'Palpatine', url: 'https://swapi.dev/api/people/21/' },
+    { name: 'Counde Dooku', url: 'https://swapi.dev/api/people/67/' },
   ];
 
   const [loading, setLoading] = useState(false);

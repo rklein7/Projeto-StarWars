@@ -1,14 +1,19 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { useRoute } from '@react-navigation/native';
 import Home from "./src/pages/Home";
 import DarkSide from "./src/pages/DarkSide";
 import LightSide from "./src/pages/LightSide";
 import CharacterDetails from "./src/pages/CharacterDetails";
+import Ships from "./src/pages/Ships";
+import { Button } from "react-native";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+  function nomesTrabalho() {
+    alert("Eduardo Sichelero RA:" + "\n" + "Rafael Augusto Klein RA: 1134873");
+  }
+
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -27,19 +32,47 @@ export default function App() {
           component={LightSide}
           name="LightSide"
           options={{
-            headerShown: false,
+            title: "Lado Luminoso",
+            headerShown: true,
+            headerStyle: {
+              backgroundColor: "black",
+            },
+            headerTintColor: "white",
+            headerRight: () => (
+              <Button
+              title="Sobre"
+              onPress={() => nomesTrabalho()}
+              />
+            )
           }}
         />
         <Stack.Screen
           component={DarkSide}
           name="DarkSide"
           options={{
-            headerShown: false,
+            title: "Lado Sombrio",
+            headerShown: true,
+            headerStyle: {
+              backgroundColor: "black",
+            },
+            headerTintColor: "white",
+            headerRight: () => (
+              <Button
+              title="Sobre"
+              onPress={() => nomesTrabalho()} />
+            )
           }}
         />
         <Stack.Screen
           component={CharacterDetails}
           name="CharacterDetails"
+          options={{
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          component={Ships}
+          name="Ships"
           options={{
             headerShown: false,
           }}
