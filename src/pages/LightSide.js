@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     width: "80%",
     height: 60,
-    borderWidth: 1, // Define a espessura da borda
+    borderWidth: 1,
     borderColor: "white", 
     borderRadius: 8,
     backgroundColor: "blue",

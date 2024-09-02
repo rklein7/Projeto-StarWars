@@ -7,12 +7,11 @@ export default function Movies({ route, navigation }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const { films: filmUrls } = route.params; // Recebe os URLs dos filmes do personagem
+  const { films: filmUrls } = route.params;
 
   useEffect(() => {
     const fetchFilms = async () => {
       try {
-        // Realiza as requisições para os URLs dos filmes associados ao personagem
         const filmPromises = filmUrls.map(url => fetch(url).then(response => response.json()));
         const filmData = await Promise.all(filmPromises);
         setFilms(filmData);
@@ -61,7 +60,7 @@ export default function Movies({ route, navigation }) {
           data={films}
           keyExtractor={(item) => item.url}
           renderItem={renderFilmItem}
-          showsHorizontalScrollIndicator={false} // Corrigido: movido para o FlatList
+          showsHorizontalScrollIndicator={false}
         />
       </View>
     </ImageBackground>

@@ -6,13 +6,13 @@ import LightSide from "./src/pages/LightSide";
 import CharacterDetails from "./src/pages/CharacterDetails";
 import Ships from "./src/pages/Ships";
 import Movies from "./src/pages/Movies";
-import { Button } from "react-native";
+import { StyleSheet, TouchableOpacity, Text } from "react-native";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   function nomesTrabalho() {
-    alert("Eduardo Sichelero RA:" + "\n" + "Rafael Augusto Klein RA: 1134873");
+    alert("Eduardo Sichelero RA: 1134933" + "\n" + "Rafael Augusto Klein RA: 1134873");
   }
 
   return (
@@ -40,10 +40,9 @@ export default function App() {
             },
             headerTintColor: "white",
             headerRight: () => (
-              <Button
-              title="Sobre"
-              onPress={() => nomesTrabalho()}
-              />
+              <TouchableOpacity title="Sobre" style={[styles.button, {backgroundColor: "blue"}]} onPress={() => nomesTrabalho()}>
+                <Text style={styles.buttonText}>Sobre</Text>
+              </TouchableOpacity>
             )
           }}
         />
@@ -58,9 +57,9 @@ export default function App() {
             },
             headerTintColor: "white",
             headerRight: () => (
-              <Button
-              title="Sobre"
-              onPress={() => nomesTrabalho()} />
+              <TouchableOpacity title="Sobre" style={[styles.button, {backgroundColor: "red"}]} onPress={() => nomesTrabalho()}>
+                <Text style={styles.buttonText}>Sobre</Text>
+              </TouchableOpacity>
             )
           }}
         />
@@ -104,3 +103,22 @@ export default function App() {
     </NavigationContainer>
   );
 }
+
+const styles = StyleSheet.create({
+  button: {
+    justifyContent: "center",
+    alignItems: "center",
+    width: 65,
+    height: 40,
+    borderWidth: 5,
+    borderColor: "black",
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: "white", 
+  },
+  buttonText: {
+    color: "white",
+    fontSize: 16,
+    fontWeight: "600",
+  },
+})

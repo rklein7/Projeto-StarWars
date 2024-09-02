@@ -7,12 +7,11 @@ export default function Ships({ route, navigation }) {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const { ships: shipUrls } = route.params; // Recebe os URLs das naves do personagem
+  const { ships: shipUrls } = route.params;
 
   useEffect(() => {
     const fetchShips = async () => {
       try {
-        // Realiza as requisições para os URLs das naves associadas ao personagem
         const shipPromises = shipUrls.map(url => fetch(url).then(response => response.json()));
         const shipData = await Promise.all(shipPromises);
         setShips(shipData);
@@ -22,7 +21,7 @@ export default function Ships({ route, navigation }) {
         setLoading(false);
       }
     };
-
+    
     fetchShips();
   }, [shipUrls]);
 
