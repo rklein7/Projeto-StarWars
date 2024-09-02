@@ -5,6 +5,7 @@ import DarkSide from "./src/pages/DarkSide";
 import LightSide from "./src/pages/LightSide";
 import CharacterDetails from "./src/pages/CharacterDetails";
 import Ships from "./src/pages/Ships";
+import Movies from "./src/pages/Movies";
 import { Button } from "react-native";
 
 const Stack = createNativeStackNavigator();
@@ -67,14 +68,36 @@ export default function App() {
           component={CharacterDetails}
           name="CharacterDetails"
           options={{
-            headerShown: false,
+            title: "Detalhes do Personagem",
+            headerShown: true,
+            headerStyle: {
+              backgroundColor: "black",
+            },
+            headerTintColor: "white",
           }}
         />
         <Stack.Screen
           component={Ships}
           name="Ships"
           options={{
-            headerShown: false,
+            title: "Naves que ja pilotou",
+            headerShown: true,
+            headerStyle: {
+              backgroundColor: "black",
+            },
+            headerTintColor: "white",
+          }}
+        />
+        <Stack.Screen
+          component={Movies}
+          name="Movies"
+          options={{
+            title: "Filmes em que aparece",
+            headerShown: true,
+            headerStyle: {
+              backgroundColor: "black",
+            },
+            headerTintColor: "white",
           }}
         />
       </Stack.Navigator>

@@ -64,7 +64,10 @@ const styles = StyleSheet.create({
     height: 100,
   },
   backgroundImage: {
-    flex: 1, // Cover the entire screen
-    resizeMode: 'cover', // Scale to fit the screen
+    flex: 1,
+    resizeMode: 'cover',
+    justifyContent: 'center',
+    width: '100%',
+    height: '100%',
   },
 });
