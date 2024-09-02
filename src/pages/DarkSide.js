@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { useState } from 'react'; 
 import { ImageBackground } from 'react-native';
-import backgroundImage from "../images/backgroundImage.jpeg"
+import backgroundImage from "../images/background.png"
 
 
 export default function DarkSide({navigation}) {

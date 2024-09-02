@@ -1,7 +1,7 @@
 import { useRoute, useNavigation } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ImageBackground, ScrollView } from 'react-native';
-import backgroundImage from "../images/backgroundImage.jpeg";
+import backgroundImage from "../images/background.png"
 
 export default function CharacterDetails() {
   const route = useRoute();
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   card: {
-    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+    backgroundColor: 'rgba(0, 0, 0, 10)',
     padding: 20,
     borderRadius: 15,
     alignItems: 'center',
@@ -88,6 +88,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFE81F',
     paddingVertical: 12,
     borderRadius: 10,
+    borderWidth: 1,
+    borderColor: "white",
     marginHorizontal: 10,
     alignItems: 'center',
   },

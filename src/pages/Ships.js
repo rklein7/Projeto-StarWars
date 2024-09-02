@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, FlatList, ActivityIndicator, ImageBackground } from 'react-native';
-import backgroundImage from "../images/backgroundImage.jpeg";
+import backgroundImage from "../images/background.png"
 
 export default function Ships({ route, navigation }) {
   const [ships, setShips] = useState([]);

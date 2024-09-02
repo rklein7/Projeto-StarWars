@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import { useState, useEffect } from 'react'; 
 import { ImageBackground } from 'react-native';
-import backgroundImage from "../images/backgroundImage.jpeg"
+import backgroundImage from "../images/background.png"
 
 export default function LightSide({ navigation }) {
   const characters = [
@@ -69,7 +69,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     width: "80%",
     height: 60,
-    borderWidth: 1,
+    borderWidth: 1, // Define a espessura da borda
+    borderColor: "white", 
     borderRadius: 8,
     backgroundColor: "blue",
     marginBottom: 30,

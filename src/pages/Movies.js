@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, FlatList, ActivityIndicator, ImageBackground } from 'react-native';
-import backgroundImage from "../images/backgroundImage.jpeg";
+import backgroundImage from "../images/background.png"
 
 export default function Movies({ route, navigation }) {
   const [films, setFilms] = useState([]);
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   filmContainer: {
-    backgroundColor: 'rgba(255, 255, 0, 0.5)',
+    backgroundColor: 'rgba(255, 255, 0, 0.62)',
     padding: 20,
     borderRadius: 10,
     marginBottom: 15,

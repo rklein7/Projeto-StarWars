@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity, StyleSheet, Image } from "react-native";
 import React from "react";
 import starwarsLogo from "../images/starwarsLogo.png";
-import backgroundImage from "../images/backgroundImage.jpeg"
+import backgroundImage from "../images/background.png"
 import { ImageBackground } from 'react-native';
 
 export default function Home({ navigation }) {
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   },
   title: {
     color: "white",
-    fontSize: 24,
+    fontSize: 30,
     fontWeight: 'bold'
   },
   text: {
@@ -48,8 +48,8 @@ const styles = StyleSheet.create({
     alignItems: "center",
     width: "80%",
     height: 60,
-    borderWidth: 5,
-    borderColor: "black",
+    borderWidth: 1,
+    borderColor: "white",
     borderRadius: 8,
     backgroundColor: "#FFE81F",
   },
@@ -60,8 +60,8 @@ const styles = StyleSheet.create({
     fontWeight: "600",
   },
   logo: {
-    width: 200,
-    height: 100,
+    width: 300,
+    height: 200,
   },
   backgroundImage: {
     flex: 1,
