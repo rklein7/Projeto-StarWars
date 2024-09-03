@@ -40,15 +40,15 @@ export default function CharacterDetails() {
           <View style={styles.container}>
             <View style={styles.header}>
               <Image source={{ uri: bioImage }} style={styles.bioImage} />
-              <CharacterPhoto imageUrl={character.imageUrl} style={styles.characterImage} /> {/* Adicione a URL da imagem ao objeto character */}
-              <CharacterBio bio={bio} imageUrl={bioImage} /> {/* Use o novo componente para a bio */}
+              <CharacterPhoto imageUrl={character.imageUrl} style={styles.characterImage} />
+              <CharacterBio bio={bio} imageUrl={bioImage} />
             </View>
-
-          <View style={styles.bioCard}>
+  
+            <View style={styles.bioCard}>
               <Text style={styles.title}>Biografia</Text>
-              <Text style={styles.bioText}>{bio}</Text> {/* Exibe a bio do personagem */}
+              <Text style={styles.bioText}>{bio}</Text> 
             </View>
-
+  
             <View style={styles.card}>
               <Text style={styles.title}>{character.name}</Text>
               <Text style={styles.detail}>Altura: {character.height}</Text>
