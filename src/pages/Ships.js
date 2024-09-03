@@ -28,12 +28,12 @@ export default function Ships({ route, navigation }) {
   const renderShipItem = ({ item }) => (
     <View style={styles.shipContainer}>
       <Text style={styles.name}>{item.name}</Text>
-      <Text style={styles.model}>Model: {item.model}</Text>
-      <Text style={styles.manufacturer}>Manufacturer: {item.manufacturer}</Text>
-      <Text style={styles.starshipClass}>Class: {item.starship_class}</Text>
-      <Text style={styles.crew}>Crew: {item.crew}</Text>
-      <Text style={styles.passengers}>Passengers: {item.passengers}</Text>
-      <Text style={styles.hyperdriveRating}>Hyperdrive Rating: {item.hyperdrive_rating}</Text>
+      <Text style={styles.shipConfig}>Model: {item.model}</Text>
+      <Text style={styles.shipConfig}>Manufacturer: {item.manufacturer}</Text>
+      <Text style={styles.shipConfig}>Class: {item.starship_class}</Text>
+      <Text style={styles.shipConfig}>Crew: {item.crew}</Text>
+      <Text style={styles.shipConfig}>Passengers: {item.passengers}</Text>
+      <Text style={styles.shipConfig}>Hyperdrive Rating: {item.hyperdrive_rating}</Text>
     </View>
   );
 
@@ -97,34 +97,10 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 5,
   },
-  model: {
+  shipConfig: {
     color: "white",
     fontSize: 16,
     marginBottom: 5,
-  },
-  manufacturer: {
-    color: "white",
-    fontSize: 16,
-    marginBottom: 5,
-  },
-  starshipClass: {
-    color: "white",
-    fontSize: 16,
-    marginBottom: 5,
-  },
-  crew: {
-    color: "white",
-    fontSize: 16,
-    marginBottom: 5,
-  },
-  passengers: {
-    color: "white",
-    fontSize: 16,
-    marginBottom: 5,
-  },
-  hyperdriveRating: {
-    color: "white",
-    fontSize: 16,
   },
   errorText: {
     color: "red",
