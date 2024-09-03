@@ -40,7 +40,7 @@ export default function App() {
             },
             headerTintColor: "white",
             headerRight: () => (
-              <TouchableOpacity title="Sobre" style={[styles.button, {backgroundColor: "blue"}]} onPress={() => nomesTrabalho()}>
+              <TouchableOpacity title="Sobre" style={[styles.button]} onPress={() => nomesTrabalho()}>
                 <Text style={styles.buttonText}>Sobre</Text>
               </TouchableOpacity>
             )
@@ -57,7 +57,7 @@ export default function App() {
             },
             headerTintColor: "white",
             headerRight: () => (
-              <TouchableOpacity title="Sobre" style={[styles.button, {backgroundColor: "red"}]} onPress={() => nomesTrabalho()}>
+              <TouchableOpacity title="Sobre" style={[styles.button ]} onPress={() => nomesTrabalho()}>
                 <Text style={styles.buttonText}>Sobre</Text>
               </TouchableOpacity>
             )
@@ -110,14 +110,15 @@ const styles = StyleSheet.create({
     alignItems: "center",
     width: 65,
     height: 40,
-    borderWidth: 5,
-    borderColor: "black",
     borderRadius: 8,
-    borderWidth: 1,
-    borderColor: "white", 
+
+    backgroundColor: 'yellow',
+    cursor: 'pointer',
+    boxShadow: '2px 4px 0px #ff8600',
+    border: '2px solid #ff8600',
   },
   buttonText: {
-    color: "white",
+    color: "#FF4D00",
     fontSize: 16,
     fontWeight: "600",
   },

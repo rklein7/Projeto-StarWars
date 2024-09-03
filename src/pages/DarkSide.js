@@ -10,7 +10,7 @@ export default function DarkSide({navigation}) {
     { name: 'Darth Vader', url: 'https://swapi.dev/api/people/4/' },
     { name: 'Darth Maul', url: 'https://swapi.dev/api/people/44/' },
     { name: 'Palpatine', url: 'https://swapi.dev/api/people/21/' },
-    { name: 'Counde Dooku', url: 'https://swapi.dev/api/people/67/' },
+    { name: 'Conde Dooku', url: 'https://swapi.dev/api/people/67/' },
   ];
 
   const [loading, setLoading] = useState(false);
@@ -66,15 +66,20 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   buttonDark: {
+
     justifyContent: "center",
     alignItems: "center",
     width: "80%",
     height: 60,
     borderWidth: 1,
-    borderColor: "white",
+    borderColor: "white", 
     borderRadius: 8,
-    backgroundColor: "red",
     marginBottom: 30,
+
+    backgroundColor: '#B51816',
+    cursor: 'pointer',
+    boxShadow: '4px 6px 0px #E01E14',
+    border: '4px solid #E01E14',
   },
   buttonText: {
     color: "white",

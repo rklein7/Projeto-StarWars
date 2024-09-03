@@ -160,17 +160,21 @@ const styles = StyleSheet.create({
   },
   button: {
     flex: 1,
-    backgroundColor: '#FFE81F',
     paddingVertical: 12,
     borderRadius: 10,
     borderWidth: 1,
-    borderColor: "white",
     marginHorizontal: 10,
     alignItems: 'center',
+
+    backgroundColor: 'yellow',
+    cursor: 'pointer',
+    boxShadow: '4px 6px 0px #ff8600',
+    border: '4px solid #ff8600',
+
   },
   buttonText: {
     fontSize: 18,
-    color: '#000',
+    color:"#FF4D00",
     fontWeight: 'bold',
   },
   loadingText: {

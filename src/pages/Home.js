@@ -67,10 +67,15 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "white",
     borderRadius: 8,
-    backgroundColor: "#FFE81F",
+
+    backgroundColor: 'yellow',
+    cursor: 'pointer',
+    boxShadow: '4px 6px 0px #ff8600',
+    border: '4px solid #ff8600',
+
   },
   buttonText: {
-    color:"#424242",
+    color:"#FF4D00",
     fontSize: 22,
     fontWeight: "600",
   },

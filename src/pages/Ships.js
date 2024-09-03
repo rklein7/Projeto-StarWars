@@ -12,9 +12,13 @@ export default function Ships({ route, navigation }) {
   useEffect(() => {
     const fetchShips = async () => {
       try {
-        const shipPromises = shipUrls.map(url => fetch(url).then(response => response.json()));
-        const shipData = await Promise.all(shipPromises);
-        setShips(shipData);
+        if (shipUrls.length === 0) {
+          setShips([]);  // Se não houver URLs, definir ships como vazio
+        } else {
+          const shipPromises = shipUrls.map(url => fetch(url).then(response => response.json()));
+          const shipData = await Promise.all(shipPromises);
+          setShips(shipData);
+        }
       } catch (error) {
         setError(error);
       } finally {
@@ -57,6 +61,16 @@ export default function Ships({ route, navigation }) {
     );
   }
 
+  if (ships.length === 0) {
+    return (
+      <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
+        <View style={styles.container}>
+          <Text style={styles.noShipsText}>Este personagem não possui uma nave.</Text>
+        </View>
+      </ImageBackground>
+    );
+  }
+
   return (
     <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
       <View style={styles.container}>
@@ -85,14 +99,14 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   shipContainer: {
-    backgroundColor: 'rgba(255, 255, 0, 0.5)',
+    backgroundColor: 'rgba(0, 0, 0, 0.9)',
     padding: 20,
     borderRadius: 10,
     marginBottom: 15,
     width: '100%',
   },
   name: {
-    color: "white",
+    color: "#FFE81F",
     fontSize: 25,
     fontWeight: 'bold',
     marginBottom: 5,
@@ -105,5 +119,10 @@ const styles = StyleSheet.create({
   errorText: {
     color: "red",
     fontSize: 16,
+  },
+  noShipsText: {
+    color: "white",
+    fontSize: 18,
+    textAlign: 'center',
   },
 });

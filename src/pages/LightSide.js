@@ -72,8 +72,12 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "white", 
     borderRadius: 8,
-    backgroundColor: "blue",
     marginBottom: 30,
+
+    backgroundColor: '#212EDE',
+    cursor: 'pointer',
+    boxShadow: '4px 6px 0px #268BFF',
+    border: '4px solid #268BFF',
   },
   buttonText: {
     color: "white",
