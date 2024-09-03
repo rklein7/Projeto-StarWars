@@ -1,0 +1,47 @@
+[
+  {
+    "id": 4,
+    "bio": "Darth Vader, o Lorde Negro dos Sith, é um poderoso Cavaleiro Jedi que se voltou para o Lado Negro da Força. Ele é conhecido por seu traje negro e seu sabre de luz vermelho. Darth Vader é um dos vilões mais icônicos da saga, conhecido por seu domínio imenso na Força e por sua presença imponente.",
+    "imageUrl": "https://i.blogs.es/6c7b5d/lego-star-wars-saga-skywalker-2683543/500_333.webp"
+  },
+  {
+    "id": 44,
+    "bio": "Darth Maul, um Sith Lord com um sabre de luz de lâmina dupla, é conhecido por sua agilidade e ferocidade em combate. Seu visual distinto, com uma pele vermelha e negra e chifres na cabeça, o torna um adversário temido e memorável na franquia Star Wars.",
+    "imageUrl": "https://i0.wp.com/i.redd.it/s8s5wpj4vo311.jpg?ssl=1"
+  },
+  {
+    "id": 21,
+    "bio": "Palpatine, também conhecido como Darth Sidious, é o Lorde Negro dos Sith que manipulou a galáxia para trazer a ordem Sith de volta ao poder. Ele é o arquétipo do mestre manipulador e ambicioso que orquestrou eventos para alcançar seu domínio total.",
+    "imageUrl": "https://t.ctcdn.com.br/fjqd6gzWFupsQ-uHhzzLBbCim6s=/640x360/smart/i752380.jpeg"
+  },
+  {
+    "id": 67,
+    "bio": "Conde Dooku, um antigo Mestre Jedi que se tornou um Lorde Sith, é conhecido por sua habilidade com um sabre de luz e suas táticas de combate elegante. Dooku é um personagem sofisticado e complexo, que traz um estilo distinto para a sua abordagem de combate e liderança.",
+    "imageUrl": "https://wallpapercave.com/wp/wp8673784.jpg"
+  },
+  {
+    "id": 1,
+    "bio": "Luke Skywalker, um jovem fazendeiro que se torna um poderoso Cavaleiro Jedi e um dos maiores heróis da galáxia. Sua jornada é marcada por crescimento pessoal, desafios e uma luta constante entre o bem e o mal, fazendo dele um símbolo de esperança e redenção.",
+    "imageUrl": "https://s2.glbimg.com/LttsvVoQZGHoIJsmdlXMULY336A=/e.glbimg.com/og/ed/f/original/2019/09/23/ea1e16061bdf92edb111d8808c6741a6.jpg"
+  },
+  {
+    "id": 5,
+    "bio": "Leia Organa, uma princesa e líder rebelde, é irmã gêmea de Luke Skywalker e uma figura fundamental na luta contra o Império. Ela é conhecida por sua coragem, inteligência e liderança, desempenhando um papel crucial na resistência contra a opressão galáctica.",
+    "imageUrl": "https://s2-g1.glbimg.com/564iUm_qElitbPk70KZZJrP83zQ=/0x0:620x465/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2016/J/R/xAVoPdSaApvuYrSmcAoA/leia.jpg"
+  },
+  {
+    "id": 20,
+    "bio": "Yoda, um pequeno e sábio Mestre Jedi, é um dos mais poderosos usuários da Força e treinador de muitos Jedi. Sua sabedoria e habilidades na Força o tornam um dos personagens mais respeitados e reverenciados da saga.",
+    "imageUrl": "https://media.revistagq.com/photos/5dcbcb4eb12b510008c88c00/16:9/w_1280,c_limit/the%20mandalorian%20bebe%20yoda.jpg"
+  },
+  {
+    "id": 10,
+    "bio": "Obi-Wan Kenobi, um Cavaleiro Jedi e mentor de Luke Skywalker, é conhecido por sua sabedoria e habilidade com um sabre de luz. Seu papel como mentor e defensor da justiça Jedi é fundamental para a saga e a formação dos Jedi em treinamento.",
+    "imageUrl": "https://ogimg.infoglobo.com.br/in/22690674-e6e-9c8/FT1086A/760/obi-wan-spin-off-star-wars.jpg"
+  },
+  {
+    "id": 51,
+    "bio": "Mace Windu, um poderoso Mestre Jedi e membro do Conselho Jedi, é conhecido por sua habilidade com um sabre de luz de lâmina púrpura e sua personalidade forte. Windu é um dos mais respeitados membros do Conselho Jedi e um defensor feroz da ordem Jedi.",
+    "imageUrl": "https://mrwallpaper.com/images/high/purple-lightsaber-mace-windu-4xnid4qk3onht94v.jpg"
+  }
+]

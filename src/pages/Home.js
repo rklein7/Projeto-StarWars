@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#FFE81F",
   },
   buttonText: {
-    color:"black",
+    color:"#424242",
     fontSize: 22,
     fontWeight: "600",
   },
