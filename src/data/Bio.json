@@ -1,18 +1,18 @@
 [
   {
     "id": 4,
-    "bio": "Darth Vader, o Lorde Negro dos Sith, é um poderoso Cavaleiro Jedi que se voltou para o Lado Negro da Força. Ele é conhecido por seu traje negro e seu sabre de luz vermelho. Darth Vader é um dos vilões mais icônicos da saga, conhecido por seu domínio imenso na Força e por sua presença imponente.",
+    "bio": "Darth Vader, o Lorde Sith, é um poderoso Cavaleiro Jedi que se voltou para o Lado Negro da Força. Ele é conhecido por seu traje negro e seu sabre de luz vermelho. Darth Vader é um dos vilões mais icônicos da saga, conhecido por seu domínio imenso na Força e por sua presença imponente.",
     "imageUrl": "https://i.blogs.es/6c7b5d/lego-star-wars-saga-skywalker-2683543/500_333.webp",
      "shipImageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnLgvGjcFmAAxDKkHV7rlDDTc2hNBcnWekYg&s"
   },
   {
     "id": 44,
-    "bio": "Darth Maul, um Sith Lord com um sabre de luz de lâmina dupla, é conhecido por sua agilidade e ferocidade em combate. Seu visual distinto, com uma pele vermelha e negra e chifres na cabeça, o torna um adversário temido e memorável na franquia Star Wars.",
+    "bio": "Darth Maul, um Lord Sith com um sabre de luz de lâmina dupla, é conhecido por sua agilidade e ferocidade em combate. Seu visual distinto, com uma pele vermelha e negra e chifres na cabeça, o torna um adversário temido e memorável na franquia Star Wars.",
     "imageUrl": "https://i0.wp.com/i.redd.it/s8s5wpj4vo311.jpg?ssl=1"
   },
   {
     "id": 21,
-    "bio": "Palpatine, também conhecido como Darth Sidious, é o Lorde Negro dos Sith que manipulou a galáxia para trazer a ordem Sith de volta ao poder. Ele é o arquétipo do mestre manipulador e ambicioso que orquestrou eventos para alcançar seu domínio total.",
+    "bio": "Palpatine, também conhecido como Darth Sidious, é um Lorde Sith que manipulou a galáxia para trazer a ordem Sith de volta ao poder. Ele é o arquétipo do mestre manipulador e ambicioso que orquestrou eventos para alcançar seu domínio total.",
     "imageUrl": "https://t.ctcdn.com.br/fjqd6gzWFupsQ-uHhzzLBbCim6s=/640x360/smart/i752380.jpeg"
   },
   {
@@ -22,7 +22,7 @@
   },
   {
     "id": 1,
-    "bio": "Luke Skywalker, um jovem fazendeiro que se torna um poderoso Cavaleiro Jedi e um dos maiores heróis da galáxia. Sua jornada é marcada por crescimento pessoal, desafios e uma luta constante entre o bem e o mal, fazendo dele um símbolo de esperança e redenção.",
+    "bio": "Luke Skywalker, um jovem fazendeiro que se tornou um poderoso Cavaleiro Jedi e um dos maiores heróis da galáxia. Sua jornada é marcada por crescimento pessoal, desafios e uma luta constante entre o bem e o mal, fazendo dele um símbolo de esperança e redenção.",
     "imageUrl": "https://s2.glbimg.com/LttsvVoQZGHoIJsmdlXMULY336A=/e.glbimg.com/og/ed/f/original/2019/09/23/ea1e16061bdf92edb111d8808c6741a6.jpg"
   },
   {
@@ -37,7 +37,7 @@
   },
   {
     "id": 10,
-    "bio": "Obi-Wan Kenobi, um Cavaleiro Jedi e mentor de Luke Skywalker, é conhecido por sua sabedoria e habilidade com um sabre de luz. Seu papel como mentor e defensor da justiça Jedi é fundamental para a saga e a formação dos Jedi em treinamento.",
+    "bio": "Obi-Wan Kenobi, um Cavaleiro Jedi e mentor de Anakin e Luke Skywalker, é conhecido por sua sabedoria e habilidade com um sabre de luz. Seu papel como mentor e defensor da justiça Jedi é fundamental para a saga e a formação dos Jedi em treinamento.",
     "imageUrl": "https://ogimg.infoglobo.com.br/in/22690674-e6e-9c8/FT1086A/760/obi-wan-spin-off-star-wars.jpg"
   },
   {

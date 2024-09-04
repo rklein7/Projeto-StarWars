@@ -111,7 +111,8 @@ const styles = StyleSheet.create({
     width: 65,
     height: 40,
     borderRadius: 8,
-
+    borderWidth: 2,
+    borderColor: "#ff8600",
     backgroundColor: 'yellow',
     cursor: 'pointer',
     boxShadow: '2px 4px 0px #ff8600',

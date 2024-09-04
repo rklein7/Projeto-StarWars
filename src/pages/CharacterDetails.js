@@ -1,18 +1,18 @@
 // CharacterDetails.js
 import { useRoute, useNavigation } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, ImageBackground, Image, ScrollView } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, ImageBackground, Image, ScrollView, ActivityIndicator } from 'react-native';
 import backgroundImage from "../images/background.png";
-import bioData from '../data/Bio.json'; // Importa o arquivo JSON com as bios
-import CharacterPhoto from '../components/CharacterBio'; // Importe o novo componente
-import CharacterBio from '../components/CharacterPhoto'; // Importe o novo componente
+import bioData from '../data/Bio.json'; 
+import CharacterPhoto from '../components/CharacterBio'; 
+import CharacterBio from '../components/CharacterPhoto'; 
 
 export default function CharacterDetails() {
   const route = useRoute();
   const navigation = useNavigation();
   const [character, setCharacter] = useState(null);
-  const [bio, setBio] = useState(''); // Estado para armazenar a bio
-  const [bioImage, setBioImage] = useState(''); // Estado para armazenar a URL da imagem da bio
+  const [bio, setBio] = useState('');
+  const [bioImage, setBioImage] = useState(''); 
 
   const goToShips = () => navigation.navigate("Ships", { ships: character.starships });
   const goToFilms = () => navigation.navigate("Movies", { films: character.films });
@@ -21,7 +21,6 @@ export default function CharacterDetails() {
     if (route.params.character) {
       const selectedCharacter = route.params.character;
       setCharacter(selectedCharacter);
-      // Encontrar a bio correspondente ao personagem
       const characterBio = bioData.find(b => b.id === parseInt(selectedCharacter.url.split('/').slice(-2, -1)[0]));
       if (characterBio) {
         setBio(characterBio.bio);
@@ -68,7 +67,7 @@ export default function CharacterDetails() {
             </View>
           </View>
         ) : (
-          <Text style={styles.loadingText}>Carregando...</Text>
+          <ActivityIndicator size="medium" color="#ff8600" />
         )}
       </ScrollView>
     </ImageBackground>
@@ -155,22 +154,20 @@ const styles = StyleSheet.create({
   },
   bioText: {
     fontSize: 16,
-    color: '#fff', // Cor do texto da bio
+    color: '#fff',
     textAlign: 'center',
   },
   button: {
     flex: 1,
     paddingVertical: 12,
     borderRadius: 10,
-    borderWidth: 1,
     marginHorizontal: 10,
     alignItems: 'center',
-
     backgroundColor: 'yellow',
     cursor: 'pointer',
     boxShadow: '4px 6px 0px #ff8600',
-    border: '4px solid #ff8600',
-
+    borderWidth: 2,
+    borderColor: '#ff8600',
   },
   buttonText: {
     fontSize: 18,

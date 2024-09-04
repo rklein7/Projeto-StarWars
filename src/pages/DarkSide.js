@@ -1,4 +1,4 @@
-import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet, ActivityIndicator } from 'react-native';
 import { useState } from 'react'; 
 import { ImageBackground } from 'react-native';
 import backgroundImage from "../images/background.png"
@@ -36,7 +36,7 @@ export default function DarkSide({navigation}) {
     <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
     <View style={styles.container}>
       {loading ? (
-        <Text>Loading...</Text>
+        <ActivityIndicator size="medium" color="#ff8600" />
       ) : (
         characters.map((character) => (
           <TouchableOpacity
@@ -66,13 +66,12 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   buttonDark: {
-
     justifyContent: "center",
     alignItems: "center",
     width: "80%",
     height: 60,
-    borderWidth: 1,
-    borderColor: "white", 
+    borderWidth: 4,
+    borderColor: "#E01E14", 
     borderRadius: 8,
     marginBottom: 30,
 

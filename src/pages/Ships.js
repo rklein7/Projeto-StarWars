@@ -13,7 +13,7 @@ export default function Ships({ route, navigation }) {
     const fetchShips = async () => {
       try {
         if (shipUrls.length === 0) {
-          setShips([]);  // Se não houver URLs, definir ships como vazio
+          setShips([]);  
         } else {
           const shipPromises = shipUrls.map(url => fetch(url).then(response => response.json()));
           const shipData = await Promise.all(shipPromises);
@@ -45,7 +45,7 @@ export default function Ships({ route, navigation }) {
     return (
       <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
         <View style={styles.container}>
-          <ActivityIndicator size="large" color="#ffffff" />
+          <ActivityIndicator size="medium" color="#ff8600" />
         </View>
       </ImageBackground>
     );
@@ -99,20 +99,20 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   shipContainer: {
-    backgroundColor: 'rgba(0, 0, 0, 0.9)',
+    backgroundColor: 'rgba(232, 232, 232, 0.9)',
     padding: 20,
     borderRadius: 10,
     marginBottom: 15,
     width: '100%',
   },
   name: {
-    color: "#FFE81F",
+    color: "#ff8600",
     fontSize: 25,
     fontWeight: 'bold',
     marginBottom: 5,
   },
   shipConfig: {
-    color: "white",
+    color: "black",
     fontSize: 16,
     marginBottom: 5,
   },

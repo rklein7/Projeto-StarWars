@@ -37,7 +37,7 @@ export default function Movies({ route, navigation }) {
     return (
       <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
         <View style={styles.container}>
-          <ActivityIndicator size="large" color="#ffffff" />
+          <ActivityIndicator size="medium" color="#ff8600" />
         </View>
       </ImageBackground>
     );
@@ -82,25 +82,25 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   filmContainer: {
-    backgroundColor: 'rgba(255, 255, 0, 0.62)',
+    backgroundColor: 'rgba(232, 232, 232, 0.9)',
     padding: 20,
     borderRadius: 10,
     marginBottom: 15,
     width: '100%',
   },
   title: {
-    color: "white",
+    color: "#ff8600",
     fontSize: 25,
     fontWeight: 'bold',
     marginBottom: 5,
   },
   director: {
-    color: "white",
+    color: "black",
     fontSize: 16,
     marginBottom: 5,
   },
   releaseDate: {
-    color: "white",
+    color: "black",
     fontSize: 16,
   },
   errorText: {

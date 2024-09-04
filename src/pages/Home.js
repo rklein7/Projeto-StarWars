@@ -64,10 +64,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     width: "80%",
     height: 60,
-    borderWidth: 1,
-    borderColor: "white",
+    borderWidth: 4,
+    borderColor: "#ff8600",
     borderRadius: 8,
-
     backgroundColor: 'yellow',
     cursor: 'pointer',
     boxShadow: '4px 6px 0px #ff8600',
