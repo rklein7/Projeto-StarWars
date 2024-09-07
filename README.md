@@ -1,36 +1,37 @@
-# Star Wars Character Biographies
-
+# Star Wars Character Biographies 🚀✨
 
 ![imagem do projeto](assets/screenshots/starWarsHome.png)
 
 ## Descrição
 
-Esta aplicação React Native apresenta a biografia dos personagens do universo Star Wars. Utilizando a SWAPI (Star Wars API), os dados dos personagens são recuperados e exibidos em uma interface amigável, permitindo aos usuários explorar as informações dos personagens de forma prática e interativa.
+Esta aplicação React Native apresenta a biografia dos personagens do universo Star Wars. Utilizando a SWAPI (Star Wars API), os dados dos personagens são recuperados e exibidos em uma interface amigável, permitindo aos usuários explorar as informações dos personagens de forma prática e interativa. 👾
 
 ![imagem do projeto](assets/screenshots/starWarsCaract.png)
----
-![imagem do projeto](assets/screenshots/starWarsBio.png)
 
 ---
 
 ## Funcionalidades
 
-- **Busca de Personagens:** A aplicação consulta a SWAPI para recuperar dados atualizados dos personagens de Star Wars.
+- **🔍 Busca de Personagens:** A aplicação consulta a SWAPI para recuperar dados atualizados dos personagens de Star Wars.
+- **📜 Exibição de Biografias:** As biografias dos personagens são renderizadas em tela com informações detalhadas.
+- **🎨 Interface Amigável:** Layout intuitivo e fácil de navegar, proporcionando uma ótima experiência ao usuário.
 
-- **Exibição de Biografias:** As biografias dos personagens são renderizadas em tela com informações detalhadas.
+---
 
-- **Interface Amigável:** Layout intuitivo e fácil de navegar, proporcionando uma ótima experiência ao usuário.
+![imagem do projeto](assets/screenshots/starWarsBio.png)
+
+---
 
 ## Instalação
 
-Siga as etapas abaixo para configurar e executar a aplicação localmente.
+Siga as etapas abaixo para configurar e executar a aplicação localmente.🛠️
 
 ### Pré-requisitos
 
 - **Node.js** (versão 12 ou superior)
 - **React Native CLI** ou **Expo CLI**
 - **Android Studio** (para emulador Android) ou **Xcode** (para emulador iOS)
-- Conexão à internet para acesso à SWAPI.
+- Conexão à internet para acesso à SWAPI. 🌐
 
 ### Passos
 
@@ -38,6 +39,7 @@ Siga as etapas abaixo para configurar e executar a aplicação localmente.
 
    ```bash
    git clone https://github.com/rklein7/Projeto-StarWars.git
+   
    cd Projeto-StarWars
    ```
 
@@ -64,7 +66,7 @@ Siga as etapas abaixo para configurar e executar a aplicação localmente.
 
 ## Uso
 
-Ao abrir a aplicação, você será recebido com uma lista de personagens de Star Wars. Ao selecionar um personagem, a biografia completa será exibida, juntamente com detalhes adicionais, como a possibilidade de ver as naves e os filmes em que ele participou, tudo isso carregado de maneira dinâmica pela SWAPI.
+Ao abrir a aplicação, você será recebido com uma lista de personagens de Star Wars. Ao selecionar um personagem, a biografia completa será exibida, juntamente com detalhes adicionais, como a possibilidade de ver as naves e os filmes em que ele participou, tudo isso carregado de maneira dinâmica pela SWAPI.🛸
 
 ## Tecnologias Utilizadas
 
@@ -80,4 +82,4 @@ Ao abrir a aplicação, você será recebido com uma lista de personagens de Sta
 - **Eduardo da Silva Sichelero** RA: 1134933
 - **Rafael Klein** RA: 1134933
 
-Este projeto foi desenvolvido como parte da disciplina de **Projeto, Design e Engenharia de Processos**.
+Este projeto foi desenvolvido como parte da disciplina de **Projeto, Design e Engenharia de Processos**. 🎓👨‍💻
