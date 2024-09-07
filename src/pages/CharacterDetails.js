@@ -1,4 +1,3 @@
-// CharacterDetails.js
 import { useRoute, useNavigation } from '@react-navigation/native';
 import React, { useEffect, useState } from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, ImageBackground, Image, ScrollView, ActivityIndicator } from 'react-native';

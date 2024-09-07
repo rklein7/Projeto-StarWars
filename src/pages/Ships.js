@@ -10,10 +10,10 @@ export default function Ships({ route, navigation }) {
   const { ships: shipUrls } = route.params;
 
   useEffect(() => {
-    const fetchShips = async () => {
+    const getShips = async () => {
       try {
         if (shipUrls.length === 0) {
-          setShips([]);  
+          setShips([]);
         } else {
           const shipPromises = shipUrls.map(url => fetch(url).then(response => response.json()));
           const shipData = await Promise.all(shipPromises);
@@ -25,18 +25,18 @@ export default function Ships({ route, navigation }) {
         setLoading(false);
       }
     };
-    
-    fetchShips();
+
+    getShips();
   }, [shipUrls]);
 
   const renderShipItem = ({ item }) => (
     <View style={styles.shipContainer}>
       <Text style={styles.name}>{item.name}</Text>
-      <Text style={styles.shipConfig}>Model: {item.model}</Text>
-      <Text style={styles.shipConfig}>Manufacturer: {item.manufacturer}</Text>
-      <Text style={styles.shipConfig}>Class: {item.starship_class}</Text>
-      <Text style={styles.shipConfig}>Crew: {item.crew}</Text>
-      <Text style={styles.shipConfig}>Passengers: {item.passengers}</Text>
+      <Text style={styles.shipConfig}>Modelo: {item.model}</Text>
+      <Text style={styles.shipConfig}>Fabricação: {item.manufacturer}</Text>
+      <Text style={styles.shipConfig}>Classe: {item.starship_class}</Text>
+      <Text style={styles.shipConfig}>Equipe: {item.crew}</Text>
+      <Text style={styles.shipConfig}>Passageiros: {item.passengers}</Text>
       <Text style={styles.shipConfig}>Hyperdrive Rating: {item.hyperdrive_rating}</Text>
     </View>
   );

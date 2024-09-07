@@ -1,6 +1,6 @@
-import { TouchableOpacity, Text, StyleSheet, View } from "react-native-web"
+import { TouchableOpacity, Text, StyleSheet } from "react-native-web"
 
-const DefaultButton =({ title, onPress }) => {
+export const DefaultButton =({ title, onPress }) => {
     return( 
         <TouchableOpacity style={styles.button} onPress={onPress}>
         <Text style={styles.buttonText}>{title}</Text>

@@ -28,8 +28,8 @@ export default function Movies({ route, navigation }) {
   const renderFilmItem = ({ item }) => (
     <View style={styles.filmContainer}>
       <Text style={styles.title}>{item.title}</Text>
-      <Text style={styles.director}>Director: {item.director}</Text>
-      <Text style={styles.releaseDate}>Release Date: {item.release_date}</Text>
+      <Text style={styles.director}>Diretor: {item.director}</Text>
+      <Text style={styles.releaseDate}>Data de lançamento: {item.release_date}</Text>
     </View>
   );
 

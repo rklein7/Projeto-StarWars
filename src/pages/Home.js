@@ -13,7 +13,7 @@ const DefaultButton =({ title, onPress }) => {
    )
  };
 
-export default function Home({ navigation }) {
+export default function Home ({ navigation }) {
   const goToLightSide = () => navigation.navigate("LightSide");
   const goToDarkSide = () => navigation.navigate("DarkSide");
 

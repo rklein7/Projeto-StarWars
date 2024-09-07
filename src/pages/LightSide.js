@@ -1,5 +1,5 @@
 import { View, Text, TouchableOpacity, StyleSheet, ActivityIndicator } from 'react-native';
-import { useState } from 'react'; 
+import { useState } from 'react';
 import { ImageBackground } from 'react-native';
 import backgroundImage from "../images/background.png"
 
@@ -14,9 +14,9 @@ export default function LightSide({ navigation }) {
 
   const [loading, setLoading] = useState(false);
 
-  const handleCharacterPress = async (character) => {
-     console.log(`Personagem selecionado: ${character.name}`);
-     console.log(`URL da API: ${character.url}`);
+  const getAndGoToCharacterDetails = async (character) => {
+    console.log(`Personagem selecionado: ${character.name}`);
+    console.log(`URL da API: ${character.url}`);
 
     try {
       setLoading(true);
@@ -33,23 +33,23 @@ export default function LightSide({ navigation }) {
 
   return (
     <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
-    <View style={styles.container}>
-      {loading ? (
-        <ActivityIndicator size="medium" color="#ff8600" />
-  ) : (
-        characters.map((character) => (
-          <TouchableOpacity
-            key={character.name}
-            style={[styles.buttonLight]}
-            onPress={() => handleCharacterPress(character)}
-          >
-            <Text style={[styles.buttonText]}>
-              {character.name}
-            </Text>
-          </TouchableOpacity>
-        ))
-      )}
-    </View>
+      <View style={styles.container}>
+        {loading ? (
+          <ActivityIndicator size="medium" color="#ff8600" />
+        ) : (
+          characters.map((character) => (
+            <TouchableOpacity
+              key={character.name}
+              style={[styles.buttonLight]}
+              onPress={() => getAndGoToCharacterDetails(character)}
+            >
+              <Text style={[styles.buttonText]}>
+                {character.name}
+              </Text>
+            </TouchableOpacity>
+          ))
+        )}
+      </View>
     </ImageBackground>
   );
 }
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     width: "80%",
     height: 60,
     borderWidth: 4,
-    borderColor: "#268BFF", 
+    borderColor: "#268BFF",
     borderRadius: 8,
     marginBottom: 30,
 
