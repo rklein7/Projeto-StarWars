@@ -8,6 +8,7 @@ import Ships from "./src/pages/Ships";
 import Movies from "./src/pages/Movies";
 import { StyleSheet, TouchableOpacity, Text } from "react-native";
 
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -79,7 +80,7 @@ export default function App() {
           component={Ships}
           name="Ships"
           options={{
-            title: "Naves que ja pilotou",
+            title: "Naves que já pilotou",
             headerShown: true,
             headerStyle: {
               backgroundColor: "black",

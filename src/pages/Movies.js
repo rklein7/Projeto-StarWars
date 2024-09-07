@@ -29,6 +29,7 @@ export default function Movies({ route, navigation }) {
     <View style={styles.filmContainer}>
       <Text style={styles.title}>{item.title}</Text>
       <Text style={styles.director}>Diretor: {item.director}</Text>
+      <Text style={styles.director}>Episodio: {item.episode_id}</Text>
       <Text style={styles.releaseDate}>Data de lançamento: {item.release_date}</Text>
     </View>
   );
@@ -87,12 +88,23 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginBottom: 15,
     width: '100%',
+    width: '98%',
+    height: 186,
+    boxShadow: '4px 6px 0px #ff8600',
+    borderWidth: 2,
+    borderColor: '#ff8600'
   },
   title: {
-    color: "#ff8600",
-    fontSize: 25,
-    fontWeight: 'bold',
-    marginBottom: 5,
+    textAlign: 'center',
+    paddingBottom: 10,
+    fontWeight: '900',
+    letterSpacing: 2,
+    fontSize: 30,
+    color: '#ff8600',
+    textTransform: 'uppercase',
+    textShadowColor: 'rgba(0, 0, 0, 0.75)',
+    textShadowOffset: { width: -1, height: 1 },
+    textShadowRadius: 3,
   },
   director: {
     color: "black",

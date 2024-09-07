@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, FlatList, ActivityIndicator, ImageBackground } from 'react-native';
+import { View, Text, StyleSheet, FlatList, ActivityIndicator, ImageBackground, Image } from 'react-native';
 import backgroundImage from "../images/background.png"
+import noShipsImage from "../images/noShips.png"
 
 export default function Ships({ route, navigation }) {
   const [ships, setShips] = useState([]);
@@ -37,7 +38,7 @@ export default function Ships({ route, navigation }) {
       <Text style={styles.shipConfig}>Classe: {item.starship_class}</Text>
       <Text style={styles.shipConfig}>Equipe: {item.crew}</Text>
       <Text style={styles.shipConfig}>Passageiros: {item.passengers}</Text>
-      <Text style={styles.shipConfig}>Hyperdrive Rating: {item.hyperdrive_rating}</Text>
+      <Text style={styles.shipConfig}>Classificação do hiperdrive: {item.hyperdrive_rating}</Text>
     </View>
   );
 
@@ -65,7 +66,9 @@ export default function Ships({ route, navigation }) {
     return (
       <ImageBackground source={backgroundImage} style={styles.backgroundImage}>
         <View style={styles.container}>
-          <Text style={styles.noShipsText}>Este personagem não possui uma nave.</Text>
+          <Image source={noShipsImage} style={styles.noShipsImage} />
+          <Text style={styles.noShipsText}>Ops...</Text>
+          <Text style={styles.noShipsTextTitle}>Parece que ainda não há viagens</Text>
         </View>
       </ImageBackground>
     );
@@ -78,6 +81,7 @@ export default function Ships({ route, navigation }) {
           data={ships}
           keyExtractor={(item) => item.url}
           renderItem={renderShipItem}
+          showsVerticalScrollIndicator={false}
         />
       </View>
     </ImageBackground>
@@ -90,7 +94,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 10,
-    marginTop: 45,
+    marginTop: 15,
   },
   backgroundImage: {
     flex: 1,
@@ -100,29 +104,58 @@ const styles = StyleSheet.create({
   },
   shipContainer: {
     backgroundColor: 'rgba(232, 232, 232, 0.9)',
-    padding: 20,
+    padding: 10,
     borderRadius: 10,
     marginBottom: 15,
-    width: '100%',
+    width: '98%',
+    height: 230,
+    boxShadow: '4px 6px 0px #ff8600',
+    borderWidth: 2,
+    borderColor: '#ff8600',
   },
   name: {
-    color: "#ff8600",
-    fontSize: 25,
-    fontWeight: 'bold',
-    marginBottom: 5,
+    textAlign: 'center',
+    paddingBottom: 10,
+    fontWeight: '900',
+    letterSpacing: 2,
+    fontSize: 30,
+    color: '#ff8600',
+    textTransform: 'uppercase',
+    textShadowColor: 'rgba(0, 0, 0, 0.75)',
+    textShadowOffset: { width: -1, height: 1 },
+    textShadowRadius: 3,
   },
   shipConfig: {
     color: "black",
     fontSize: 16,
-    marginBottom: 5,
+
   },
   errorText: {
     color: "red",
     fontSize: 16,
   },
   noShipsText: {
-    color: "white",
-    fontSize: 18,
     textAlign: 'center',
+    fontWeight: '900',
+    letterSpacing: 2,
+    fontSize: 30,
+    color: 'yellow',
+    textTransform: 'uppercase',
+    textShadowColor: 'rgba(255, 134, 0, 0.75)',
+    textShadowOffset: { width: -3, height: 3 },
+    textShadowRadius: 3,
+  },
+  noShipsTextTitle: {
+    color: 'yellow',
+    textShadowColor: 'rgba(255, 134, 0, 0.75)',
+    textShadowOffset: { width: -2, height: 2 },
+    textShadowRadius: 3,
+    fontSize: 20,
+    fontWeight: "600",
+  },
+  noShipsImage: {
+    width: 400,
+    height: 400,
   },
 });
+

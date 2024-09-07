@@ -39,9 +39,15 @@ const styles = StyleSheet.create({
     paddingVertical: 100, 
   },
   title: {
-    color: "white",
-    fontSize: 30,
-    fontWeight: 'bold'
+    textAlign: 'center',
+    fontWeight: '900',
+    letterSpacing: 2,
+    fontSize: 35,
+    color: 'yellow',
+    textTransform: 'uppercase',
+    textShadowColor: 'rgba(255, 134, 0, 0.75)',
+    textShadowOffset: { width: -3, height: 3 },
+    textShadowRadius: 3,
   },
   text: {
     color: "white",
@@ -75,7 +81,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color:"#FF4D00",
-    fontSize: 22,
+    fontSize: 20,
     fontWeight: "600",
   },
 });
