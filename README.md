@@ -80,6 +80,6 @@ Ao abrir a aplicação, você será recebido com uma lista de personagens de Sta
 ## Contribuidores
 
 - **Eduardo da Silva Sichelero** RA: 1134933
-- **Rafael Klein** RA: 1134933
+- **Rafael Klein** RA: 1134873
 
 Este projeto foi desenvolvido como parte da disciplina de **Projeto, Design e Engenharia de Processos**. 🎓👨‍💻
