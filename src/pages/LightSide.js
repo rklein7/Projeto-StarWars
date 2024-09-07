@@ -1,7 +1,8 @@
-import { View, Text, TouchableOpacity, StyleSheet, ActivityIndicator } from 'react-native';
+import { View, Text, StyleSheet, ActivityIndicator } from 'react-native';
 import { useState } from 'react';
 import { ImageBackground } from 'react-native';
 import backgroundImage from "../images/background.png"
+import { ForcesButton } from "../components/Button.js";
 
 export default function LightSide({ navigation }) {
   const characters = [
@@ -38,15 +39,18 @@ export default function LightSide({ navigation }) {
           <ActivityIndicator size="medium" color="#ff8600" />
         ) : (
           characters.map((character) => (
-            <TouchableOpacity
+            <ForcesButton
               key={character.name}
-              style={[styles.buttonLight]}
+              style={[{
+                backgroundColor: '#212EDE',borderColor: "#268BFF",
+                boxShadow: '4px 6px 0px #268BFF',
+                border: '4px solid #268BFF',}]}
               onPress={() => getAndGoToCharacterDetails(character)}
             >
-              <Text style={[styles.buttonText]}>
+              <Text style={[{ color: "white", fontSize: 20, fontWeight: "600" }]}>
                 {character.name}
               </Text>
-            </TouchableOpacity>
+            </ForcesButton>
           ))
         )}
       </View>
@@ -63,26 +67,6 @@ const styles = StyleSheet.create({
   text: {
     color: "white",
     marginBottom: 20,
-  },
-  buttonLight: {
-    justifyContent: "center",
-    alignItems: "center",
-    width: "80%",
-    height: 60,
-    borderWidth: 4,
-    borderColor: "#268BFF",
-    borderRadius: 8,
-    marginBottom: 30,
-
-    backgroundColor: '#212EDE',
-    cursor: 'pointer',
-    boxShadow: '4px 6px 0px #268BFF',
-    border: '4px solid #268BFF',
-  },
-  buttonText: {
-    color: "white",
-    fontSize: 22,
-    fontWeight: "600",
   },
   backgroundImage: {
     flex: 1,

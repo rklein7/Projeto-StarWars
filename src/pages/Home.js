@@ -1,17 +1,9 @@
-import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet, Image } from "react-native";
 import React from "react";
 import starwarsLogo from "../images/starwarsLogo.png";
 import backgroundImage from "../images/background.png"
 import { ImageBackground } from 'react-native';
-// import DefaultButton from '../components/DefaultButton.js'
-
-const DefaultButton =({ title, onPress }) => {
-   return( 
-       <TouchableOpacity style={styles.button} onPress={onPress}>
-       <Text style={styles.buttonText}>{title}</Text>
-     </TouchableOpacity>
-   )
- };
+import {DefaultButton} from '../components/Button.js'
 
 export default function Home ({ navigation }) {
   const goToLightSide = () => navigation.navigate("LightSide");
@@ -64,24 +56,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     width: '100%',
     height: '100%',
-  },
-  button: {
-    justifyContent: "center",
-    alignItems: "center",
-    width: "80%",
-    height: 60,
-    borderWidth: 4,
-    borderColor: "#ff8600",
-    borderRadius: 8,
-    backgroundColor: 'yellow',
-    cursor: 'pointer',
-    boxShadow: '4px 6px 0px #ff8600',
-    border: '4px solid #ff8600',
-
-  },
-  buttonText: {
-    color:"#FF4D00",
-    fontSize: 20,
-    fontWeight: "600",
   },
 });

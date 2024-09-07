@@ -68,7 +68,7 @@ export default function Ships({ route, navigation }) {
         <View style={styles.container}>
           <Image source={noShipsImage} style={styles.noShipsImage} />
           <Text style={styles.noShipsText}>Ops...</Text>
-          <Text style={styles.noShipsTextTitle}>Parece que ainda não há viagens</Text>
+          <Text style={styles.noShipsTextTitle}>Parece que não pilotou nenhuma nave!</Text>
         </View>
       </ImageBackground>
     );
